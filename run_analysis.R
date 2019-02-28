@@ -51,4 +51,4 @@ mdata <- mdata %>% select(-activities)
 tidydata <- mdata %>% group_by(actitivities_description,subjects) %>% summarise_all(mean)
 
 ## exporting tidy data set to csv
-write.csv(tidydata, "tidydata.csv", row.names=FALSE)
+write.table(tidydata, "tidydata.txt", row.names=FALSE)
